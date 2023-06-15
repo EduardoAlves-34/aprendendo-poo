@@ -1,7 +1,9 @@
 package com.brs.brsaplication;
 
-import com.brs.brsaplication.dao.ContaBanco;
-
+import com.brs.brsaplication.bank.ContaBanco;
+import com.brs.brsaplication.combat.Character;
+import com.brs.brsaplication.combat.Fight;
+import com.brs.brsaplication.encapsulamento.ControlImpl;
 
 
 //@SpringBootApplication
@@ -10,31 +12,26 @@ public class BrsaplicationApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(BrsaplicationApplication.class, args);
 
-		ContaBanco p1 = new ContaBanco();
-		ContaBanco p2 = new ContaBanco();
-		ContaBanco p3 = new ContaBanco();
+		Character P[] = new Character[5];
+		Fight UFC = new Fight();
 
-		p1.setUser("Bruno");
-		p1.setAccountNum(15);
-		p1.setBalance(1000.00);
-		p1.setAccountType("cc");
-		p1.setStats(false);
+		P[0] = new Character("Ciri","brazil","female",20,1.70,75.00,100,0,0);
 
-		p2.setUser("Pedro");
-		p2.setAccountNum(17);
-		p2.setBalance(2000.00);
-		p2.setAccountType("cp");
-		p2.setStats(false);
+		P[1] = new Character("Yennefer","United States","female" ,28,1.71,77.00,50,0,10);
 
-		p3.setUser("Fabricio");
-		p3.setAccountNum(20);
-		p3.setBalance(3000.00);
-		p3.setAccountType("cc");
-		p3.setStats(false);
+		UFC.brandFight(P[0],P[1]);
+		UFC.toFight();
+
+		P[0].status();
+
+		P[1].status();
 
 
 
-		System.out.println(p3.getBalance());
+
+
+
+
 
 	}
 }

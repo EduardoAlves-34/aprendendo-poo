@@ -1,4 +1,4 @@
-package com.brs.brsaplication.dao;
+package com.brs.brsaplication.bank;
 
 public class ContaBanco {
 
